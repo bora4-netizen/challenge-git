@@ -1,0 +1,68 @@
+.global-footer {
+  background: #0b1c2d;
+  color: #cfd8e3;
+  font-family: "Segoe UI", sans-serif;
+  padding: 80px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h4,
+.footer-col.brand h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #cfd8e3;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #4da3ff;
+}
+
+.footer-col.contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #20344d;
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .global-footer {
+    padding: 60px 20px 20px;
+  }
+}
