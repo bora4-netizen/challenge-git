@@ -215,6 +215,51 @@
     <p>© 2026 CarePlus. All rights reserved.</p>
   </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Header scroll effect
+  const header = document.querySelector(".top-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  // Fade up animation on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".card, .about-banner, .footer-col").forEach(el => {
+    el.classList.add("fade-up");
+    observer.observe(el);
+  });
+
+  // Footer animation
+  const footer = document.querySelector(".global-footer");
+  observer.observe(footer);
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(anchor.getAttribute("href"))?.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+
+});
+</script>
 
 </body>
+
+
 </html>

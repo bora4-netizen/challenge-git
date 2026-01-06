@@ -242,3 +242,42 @@
   @media (max-width: 600px) {
     h1 { font-size: 28px; }
   }
+
+  /* ===== Animations ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scale-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Header scroll effect */
+.top-header.scrolled {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Footer animation */
+.global-footer {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.global-footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
