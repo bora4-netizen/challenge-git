@@ -177,3 +177,67 @@
     padding: 60px 20px 20px;
   }
 }
+
+
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    margin-top:50px ;
+  }
+
+  .products {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  }
+
+  .icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0284c7;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 28px; }
+  }
