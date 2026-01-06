@@ -63,6 +63,52 @@
   background: #333;
 }
 
+
+.about-banner {
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(135deg, #f8f9fb, #e9ecf1);
+  display: flex;
+  align-items: center;
+}
+
+.banner-content {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.about-banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.about-banner p {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  color: #777;
+}
+
+.breadcrumb a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
 .global-footer {
   background: #0b1c2d;
   color: #cfd8e3;
