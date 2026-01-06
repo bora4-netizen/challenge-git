@@ -281,3 +281,26 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Animated heading */
+.animated-title {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 1s ease;
+  background: linear-gradient(90deg, #ffffff, #4d50ff, #0ea5e9);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animated-title.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 0% center; }
+  to   { background-position: 200% center; }
+}

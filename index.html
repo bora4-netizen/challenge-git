@@ -48,7 +48,7 @@
 
 <body>
 
-<h1>🚀 Premium Digital Products</h1>
+<h1 class="animated-title">🚀 Premium Digital Products</h1>
 
 <div class="products">
 
@@ -255,6 +255,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const title = document.querySelector(".animated-title");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(title);
 
 });
 </script>
